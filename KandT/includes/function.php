@@ -6,13 +6,13 @@
  * Time: 15:37
  */
 
-function active($page, $text)
+function active($page, $text, $currentPage)
 {
     $activeClass = '';
-    if($page === basename($_SERVER['PHP_SELF'])){
+    if($page === $currentPage){
         $activeClass = ' class="active"';
     }
     ?>
-    <li<?=$activeClass?>><a href="<?=$page?>"><?=$text?></a></li>
+    <li<?=$activeClass?>><a href="?<?=APP_PAGE_PARAM?>=<?=$page?>"><?=$text?></a></li>
     <?php
 }

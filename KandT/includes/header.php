@@ -1,4 +1,5 @@
 <?php
+require_once "content.php";
 require_once "function.php";
 ?>
 <!DOCTYPE html>
@@ -17,10 +18,11 @@ require_once "function.php";
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <?php active('index.php', 'Teletubbies')?>
-                <?php active('kittens.php', 'Chatonse')?>
-                <?php active('ironmaiden.php', 'Iron Maidennnnn')?>
-                <?php active('serge.php', 'Serge Lama')?>
+                <?php
+                foreach ($content as $lien => $page) {
+                    active($lien, $page['nav-title'],$currentPage);
+                }
+                ?>
             </ul>
         </div>
     </div>
