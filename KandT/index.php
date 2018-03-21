@@ -1,5 +1,6 @@
 <?php
 require_once "includes/content.php";
+
 // definition de la page par defaut
 define('APP_DEFAUT_PAGE', 'teletubbies');
 define('APP_PAGE_PARAM', 'p');

@@ -19,8 +19,8 @@ require_once "function.php";
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <?php
-                foreach ($content as $lien => $page) {
-                    active($lien, $page['nav-title'],$currentPage);
+                foreach ($content as $slug => $Unepage) {
+                    active($slug, $Unepage['nav-title'],$currentPage);
                 }
                 ?>
             </ul>
