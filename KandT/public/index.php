@@ -1,6 +1,6 @@
 <?php
 define('APP_ROOT_DIR', dirname(__DIR__)."/");
-require_once APP_ROOT_DIR."includes/connexion.php";
+require_once APP_ROOT_DIR."/backoffice/connexion.php";
 require_once APP_ROOT_DIR."includes/function.php";
 // definition de la page par defaut
 define('APP_DEFAUT_PAGE', 'teletubbies');
