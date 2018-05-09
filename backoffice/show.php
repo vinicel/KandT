@@ -34,19 +34,7 @@ if ($row === false) {
     exit;
 }
 ?>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="../public/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="../public/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-    <title>Info</title>
-</head>
 <body>
-<div class="container admin">
-    <div class="row">
-    <div class="rightContainer">
         <div>
             <a style="font-size: 50px;" href="admin.php">Retour vers l'admin</a>
         </div>
@@ -112,7 +100,4 @@ if ($row === false) {
         <?php } ?>
         <a href="edit.php?id=<?=$row['id']?>">Modifier</a>
         <a href="delete.php?id=<?=$row['id']?>">Supprimer</a>
-    </div>
-</div>
 </body>
-</html>

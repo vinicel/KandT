@@ -14,14 +14,12 @@ if (empty($_POST['title']) || empty($_POST['h1']) || empty($_POST['p']) || empty
     header('Location: error.php');
     exit;
 }
-
 $request = 'INSERT INTO
           `page` 
           ( `title`, `h1` ,`p` ,`span-class` ,`span-text` ,`img-alt` ,`img-src` ,`nav-title` ,`slug`)
         VALUES
           ( :title ,:h1 ,:p ,:spanclass ,:spantext ,:imgalt ,:imgsrc ,:navtitle ,:slug)
 ;';
-
 $stmt = $connection->prepare($request);
 $stmt->bindParam(':title', htmlentities($_POST['title']));
 $stmt->bindParam(':h1', htmlentities($_POST['h1']));

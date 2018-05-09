@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Error</title>
-</head>
 <style>
 body {
     background: black;
@@ -17,4 +9,3 @@ width: 50%; margin: 0 auto;">
     Vous n'avez pas tout rempli les champs </h1>
 </body>
 
-</html>

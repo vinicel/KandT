@@ -10,6 +10,7 @@ require_once "connection.php";
 
 $request = 'SELECT
                 `id`,
+                `slug`,
                 `title`,
                 `h1`,
                 `p`,
@@ -17,8 +18,7 @@ $request = 'SELECT
                 `span-text`,
                 `img-alt`,
                 `img-src`,
-                `nav-title`,
-                `slug`
+                `nav-title`
                 FROM
                 `page`
                 WHERE
@@ -30,18 +30,7 @@ $stmt->bindParam(':id', $_GET['id']);
 $stmt->execute();
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="../bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-</head>
 <body>
-<div class="container">
-    <div class="row">
         <h1><strong>Modifier</strong></h1>
         <form action="doedit.php" method="post">
             <input type="hidden" name="id" value="<?=$_GET['id']?>" placeholder="id">
@@ -56,6 +45,5 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
             <input placeholder="slug" value="<?=$row['slug']?>" type="text" name="slug">
             <input placeholder="title" type="submit" value="Modifier">
         </form>
-    </div>
 </body>
-</html>
+

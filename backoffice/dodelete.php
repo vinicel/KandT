@@ -13,9 +13,7 @@ $request =
     WHERE
     `id` = :id
     ;';
-
 $stmt = $connection->prepare($request);
 $stmt->bindParam(':id', $_POST['id']);
 $stmt->execute();
-
 header('Location: admin.php');

@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="../bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-</head>
 <body>
-<div class="container">
-        <div class="row">
-            <h1><strong>Liste des pages </strong></h1>
-            <table class="table table-stripped table-bordered">
+            <h1><strong>Liste des pages</strong></h1>
+            <table>
                 <thead>
                 <tr>
-                    <th>Title</th>
+                    <th>Id</th>
+                    <th>title</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -31,7 +22,7 @@
                 while (false !== $row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
                 <td><?=$row["id"]?></td>
                 <td><?=$row["title"]?></td>
-                <td><a href="show.php?id=<?=$row['id']?>" class="btn btn-default"><span class="glyphicon glyphicon-eye-open"></span>voir</a></td>
+                <td><a href="show.php?id=<?=$row['id']?>">Voir</td>
                 </tbody>
                 <?php endwhile;?>
             </table>
@@ -50,4 +41,3 @@
                 <input placeholder="title" type="submit" value="Ajouter">
             </form>
 </body>
-</html>
